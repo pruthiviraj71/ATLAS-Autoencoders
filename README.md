@@ -4,7 +4,7 @@ In this, we'll train an Autoencoder to compress the four momentum of jet particl
 
 ## Getting Started
 
-1. Clone this repo and then open the ATLAS_Autoencoders.ipynb notebook OR directly open in Colab [from here](https://colab.research.google.com/drive/1lbKVg9AUMowreMPxFsdBwJuLK35xIOSy?usp=sharing) (Recommended)
+1. Clone this repo and then open the ATLAS_Autoencoders.ipynb notebook OR directly open in Colab [from here](https://colab.research.google.com/drive/1lbKVg9AUMowreMPxFsdBwJuLK35xIOSy?usp=sharing) (Recommended to run from colab only)
 
 2. If running it locally, then make sure fast.ai API is installed.
 
@@ -36,7 +36,7 @@ For the objects, we have different types of objects as shown below from which we
 
 ## Preprocessing
 
-First, we observe that the dataset is seperated with `;`, the dataset is read into a pandas DataFrame by splitting with `;`. 
+First, we observe that the dataset is seperated with `;`, the dataset is read into a pandas DataFrame by splitting with `;`.
 Then, after reading the dataset, we'll remove all NaN and Null values.
 Once that is done, we will perform the normalization to the data shown below
 1. Since E follows the exp distribution, we perform normalization by taking logarithm (base 10) of the column. 
@@ -49,7 +49,7 @@ For un-normalization, we will simple reverse these steps (i.e. taking exponent w
 
 ## Architecture
 
-The Architecture which was used for training is simple feed forward neural network with fully connected layers whose size for encoding goes from 4 to 200 to 20 to 3 and for decoding it goes all the way back to 4.
+The Architecture which was used for training is simple feed forward neural network with fully connected layers whose size for encoding goes from 4 -> 200 -> 20 -> 3 and for decoding it goes all the way back from 3 to 4 (3 -> 20 -> 200 -> 4).
 
 A representation of the architecture is shown below.
 
