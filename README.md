@@ -1,8 +1,18 @@
 # ATLAS-Autoencoders
 
-## Introduction
-
 In this, we'll train an Autoencoder to compress the four momentum of jet particles into 3, based on ATLAS data.
+
+## Getting Started
+
+1. Clone this repo and then open the ATLAS_Autoencoders.ipynb notebook OR directly open in Colab [from here](https://colab.research.google.com/drive/1lbKVg9AUMowreMPxFsdBwJuLK35xIOSy?usp=sharing) (Recommended)
+
+2. If running it locally, then make sure fast.ai API is installed.
+
+`!pip install -U fastbook
+import fastbook
+fastbook.setup_book()`
+
+If running in colab, just follow the rest of instructions given in the notebook.
 
 ## Dataset
 
@@ -11,6 +21,8 @@ The dataset `monojet_Zp2000.0_DM_50.0_chan3.csv` is a csv file seperated by `;` 
 `event ID; process ID; event weight; MET; METphi; obj1, E1, pt1, eta1, phi1; obj2,
 E2, pt2, eta2, phi2; . . .
 `
+
+For the objects, we have different types of objects as shown below from which we have to pick only `j` particles.
 
 | Symbol ID | Object |
 | --- | ----------- |
@@ -21,14 +33,6 @@ E2, pt2, eta2, phi2; . . .
 | m- | muon (µ−) |
 | m+ | antimuon (µ+) |
 | g | photon (γ) |
-
-For the objects, we have different types of objects as shown of which we need to pick only `j` particles.
-
-## Getting Started
-
-1. Clone this repo and then open the notebook in Jupyter Notebooks OR Directly open in Colab [from here](https://colab.research.google.com/drive/1lbKVg9AUMowreMPxFsdBwJuLK35xIOSy?usp=sharing)
-
-2. If running it locally, then make sure ![fast.ai](https://www.fast.ai/) API is installed. Else if ruuning in colab, follow the rest of instructions given in the notebook.
 
 ## Preprocessing
 
